@@ -1,7 +1,7 @@
 from flask import Flask,render_template,request
 import pickle
 app = Flask(__name__)
-@app.route('/' , methods=['GET', 'POST'])
+@app.route('/' , methods=['GET','POST'])
 def home():
     if request.method =='POST':
         model = pickle.load(open("lr_model.pkl","rb"))
